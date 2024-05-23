@@ -1,0 +1,21 @@
+name: autollama
+services:
+  autollama:
+    container_name: autollama
+    image: ollama/ollama
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 11434
+        published: "11434"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/sophiaparafina/git/spara/auto_ollama
+        target: /root/.ollama
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: autollama_default
