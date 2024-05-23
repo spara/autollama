@@ -12,7 +12,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /Users/sophiaparafina/git/spara/auto_ollama
+        source: </path/to/autollama>
         target: /root/.ollama
         bind:
           create_host_path: true
